@@ -1,0 +1,23 @@
+features
+    help for the input page
+    better error display for the input page 
+    manual entry for the input page
+    help for the second page
+    make sure it looks okay on mobile
+
+stretch features   
+    tween the progress bar
+    progress bar options
+    theme choices
+    font choices
+
+tech debt
+    make progress a progress element
+    add prettier
+    add tests
+    add some ci/cd
+
+devops
+    deploy
+    collect some sort of usage metrics
+    bug reporting
