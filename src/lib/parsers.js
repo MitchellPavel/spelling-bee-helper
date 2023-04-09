@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { complement, curry, defaultTo, dropLast, fromPairs, head, isNil, map, mergeAll, nth, pipe, split, toLower, when, zip } from "ramda";
+import { complement, curry, defaultTo, dropLast, fromPairs, head, isNil, map, mergeAll, nth, pipe, split, toLower, trim, when, zip } from "ramda";
 
 export const parseTopLine = pipe(
     split(', '),
@@ -32,8 +32,10 @@ export const parseBingo = pipe(
 export const parseTwoLetterList = pipe(
     split('\n'),
     map(pipe(
+        trim,
         split(' '),
         map(pipe(
+            trim,
             split('-'),
             ([letters, number]) => ([toLower(letters), Number(number)])
         )),
